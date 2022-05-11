@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author danilo.maximiano
  */
-public class Escr01 {
+public class PlayOn {
 
     /**
      * @param args the command line arguments
