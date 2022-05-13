@@ -111,6 +111,7 @@ public class PlayOn {
             switch(decisaoRito){
                 case "A":
                     System.out.println("..case A.");
+                    break;
                 case "a":
                     System.out.println("...case a ..");
                     break;
