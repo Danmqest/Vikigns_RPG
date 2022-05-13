@@ -25,7 +25,7 @@ public class PlayOn {
         
         Scanner input = new Scanner(System.in);
         String playUm, respostaCharada;
-        char decisaoRito;
+        String decisaoRito;
         int X, decisao01, decisaoClasse;
         double Y;
         
@@ -107,16 +107,20 @@ public class PlayOn {
             System.out.println("\n desafio do Rito de Passagem... ");
             System.out.println("\n qual a sua decisao (A) ou (B)....");
             decisaoRito = input.next();
-            
+
             switch(decisaoRito){
-                case 'A': 
+                case "A":
                     System.out.println("..case A.");
-                case 'a':
-                    System.out.println("..case a ..");
-                case 'B':
+                case "a":
+                    System.out.println("...case a ..");
+                    break;
+                case "B":
                     System.out.println("...case B....");
-                case 'b':
+                    break;
+                case "b":
                     System.out.println(" case b");
+                    break;
+
             }
             
             
