@@ -1,28 +1,21 @@
 package Projeto;
-
-
-
-
 import java.util.Scanner;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-
 /**
  *
  * @author danilo.maximiano
  */
 public class PlayOn {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        //Importação e Variaveis: 
-        
+        //Importação e Variaveis:
+
         Scanner input = new Scanner(System.in);
         String playUm, respostaCharada;
         String decisaoRito;
@@ -98,8 +91,7 @@ public class PlayOn {
             
                 System.out.println("else acerto");
                    
-            } 
-                      
+            }
            
         } 
         }
