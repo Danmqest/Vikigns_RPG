@@ -126,6 +126,8 @@ public class Menu {
                 "\t\tÒla Caros Amigos Pronto pra inicia \n" +
                 "\t\tUma aventura da Historia muito Importante da civilização \n" +
                 "\t\tOs Guerreiros Vikings\n\n\t" );
+        System.out.println("__________________________________________________________________________________________________________________________" +
+                "_______________________________________________________________________________________");
 
 
         PlayOn.Menu();
