@@ -25,7 +25,7 @@ public class PlayOn {
                         + "da Escandinávia.\n"
                         + "Num raro dia primaveril, um casal de comerciantes festeja com os aldeões a chegada de\n"
                         + "seu filho primogênito, com muita comida e música. Com o nome de ? " );
-        System.out.println( "Digite o nome do seu personagem: " );
+        System.out.println( "\nDigite o nome do seu personagem: " );
         playUm = input.nextLine();
         System.out.println( "Voce deseja que seu nome seja " + playUm + "?" );
         System.out.println( "[Digite (1)-SIM ou (2)-NÃO]" );
