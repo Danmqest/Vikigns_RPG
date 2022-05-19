@@ -1,7 +1,6 @@
 package Projeto;
 
 public class Menu {
-
     public static void main(String[] args) {
         System.out.println("\n\n" +
                 "                         _______   ________  ______   ______   __    __   ______                                                \n" +
