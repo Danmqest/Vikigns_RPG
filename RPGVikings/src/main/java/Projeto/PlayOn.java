@@ -68,10 +68,7 @@ public class PlayOn {
                 + "só não livrou-se dele pois chateava-se ainda mais com a ideia de que sua rainha sofresse.\n"
                 + "Dois anos após a criança estar no reino a rainha teve Draco, seu filho primogênito com o\n"
                 + "rei.");
-            System.out.println( "\n\n"
-                    + "_____________________________________________________________________________________________________________________________________\n"
-                    + "=====================================================================================================================================\n"
-                    + "______________________________________________________________________________________________________________________________________\n");
+          
 
         System.out.println("\nDurante toda a vida ambos foram criados juntos, Draco sendo preparado para assumir o trono e voce " + playUm + " para se tornar um nobre...\n+"
                 + " Escolhar a sua classe :\n [ (1)Guerreiro - (2)Curandeiro - (3)Arqueiro - (4)Paladino ] ");
