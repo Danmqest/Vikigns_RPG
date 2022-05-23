@@ -275,23 +275,24 @@ public class PlayOn  {
                 media =3;
                 System.out.println("");
 
-            System.out.println( "Desafio 7:\n" );
-            System.out.println( "Missão Cumprida... SKOOOL" );
-            System.out.println( "O informante levado  em segurança até o castelo e entregue ao rei.\n"
-                    + "Boatos são espalhados dizendo que o informante carregava um diario escrito mais ou menos na mesma época\n"
-                    + "em que " + playUm + "  foi abandonado no castelo. Furioso ele decide entrar no salão e confrontar o rei,\n"
-                    + "ao conseguir capturar o que o informante entregou ao rei ele descobre que se trata de um diário\n"
-                    + "escrito a partir da visão do grupo inimigo.\n\nAo ler o diario ele se depara com uma charada:\n" );
+                System.out.println( "Desafio 7:\n" );
+                System.out.println( "Missão Cumprida... SKOOOL" );
+                System.out.println( "O informante levado  em segurança até o castelo e entregue ao rei.\n"
+                        + "Boatos são espalhados dizendo que o informante carregava um diario escrito mais ou menos na mesma época\n"
+                        + "em que " + playUm + "  foi abandonado no castelo. Furioso ele decide entrar no salão e confrontar o rei,\n"
+                        + "ao conseguir capturar o que o informante entregou ao rei ele descobre que se trata de um diário\n"
+                        + "escrito a partir da visão do grupo inimigo.\n\nAo ler o diario ele se depara com uma charada:\n" );
 
-            System.out.println( "O que salvou que poderia ter matado ? (Sem acentuação)" );
-            respostaCharada = input.next();
+                System.out.println( "O que salvou que poderia ter matado ? (Sem acentuação)" );
+                respostaCharada = input.next();
 
-            if (respostaCharada.equalsIgnoreCase( "Agua" )) {
-                System.out.println( "A charada destravava uma pagina em que falava sobre o ataque que aconteceu na vila na epoca " +
-                "que encontraram\n" + playUm
-                + " Quem atacou a sua família e o motivo dos ataques atuais dos mercenários." );                break;
+                if (respostaCharada.equalsIgnoreCase( "Agua" )) {
+                    System.out.println( "A charada destravava uma pagina em que falava sobre o ataque que aconteceu na vila na epoca " +
+                            "que encontraram\n" + playUm
+                            + " Quem atacou a sua família e o motivo dos ataques atuais dos mercenários." );
+                    break;
 
-            } else {
+                } else {
                 System.out.println( "Você errou tem mais [" + i + "] Tentativas \nOque na histório o salvou quando sua mãe fugia " +
                         "mas poderia \no ter matado ? (Sem acentuação)" );
                 respostaCharada = input.next();
@@ -306,10 +307,7 @@ public class PlayOn  {
                     System.out.println( "Leia Mais meu jovem..." );
 
                 }
+                }
             }
-
-
         }
-
     }
-}
