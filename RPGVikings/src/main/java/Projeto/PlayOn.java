@@ -18,7 +18,7 @@ public class PlayOn  {
         Scanner input = new Scanner( System.in );
         String playUm, respostaCharada;
         String decisaoRito;
-        int X = 0, decisao01, decisaoClasse;
+        int X, decisao01, decisaoClasse;
         double Y;
 
         //Inicio do Jogo:
@@ -239,13 +239,18 @@ public class PlayOn  {
 
             switch (flor) {
                 case (1):
-                    System.out.println( " Opção errada volte ao começo do desafio \n" +
-                            "Vamos escolher Seu Personagem: " );
+                    System.out.println( " \n\t( Opção errada volte ao começo do desafio ) \n\n");
+                    System.out.println("=======================================================================================================================" +
+                            "==================================================================================================================================" +
+                            "=====================================================================================================" +
+                            "==============================" +
+                            "\n\t\t\tVamos escolher Seu Personagem: " );
                     Menu();
                     break;
 
 
                 case (2):
+
                     System.out.println( "A flor escolhida é o antídoto necessário para salvar o informante.\n" +
                             "Gratidão é uma flor roxa. O informante se sente grato pela ajuda e permite um "
                             + "desvio no caminho para encontrar informações sobre os mercenários \nque o atacaram.\n" );
