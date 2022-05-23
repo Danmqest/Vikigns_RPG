@@ -262,8 +262,18 @@ public class PlayOn  {
             System.out.println( "O " + playUm + " e o informante acabam descobrindo que os mercenários estavão assaltando o reino,\n"
                     + "ao chegar na cidade eles se deparam com alguns mercenários invadindo uma taberna e precisam intervir,\n"
                     + "mas ambos estão em desvantagem numérica e precisam acertar a ordem de ataque para que consigam bloquear " +
-                    "\nos mercenários sem morrer:\n"
-                    + "(aqui é meio que um quebra cabeça)\n" );
+                    "\nos mercenários sem morrer:\n");
+                    System.out.println("São cinco mercenários, descubram a média dos mercenários e ataque primeiro o correspondente \n"
+                    +"para que consigam sair dessa com vida");
+                  double media = input.nextDouble();
+
+                while(media != 3){
+                System.out.println("Você foi atacado e perdeu 1 de vida, tente novamente.");
+                media = input.nextDouble();
+                }
+                System.out.println("Você atingiu o mercenário mais forte e conseguiu uma vantagem na luta! Siga em frente!");
+                media =3;
+                System.out.println("");
 
             System.out.println( "Desafio 7:\n" );
             System.out.println( "Missão Cumprida... SKOOOL" );
@@ -277,8 +287,9 @@ public class PlayOn  {
             respostaCharada = input.next();
 
             if (respostaCharada.equalsIgnoreCase( "Agua" )) {
-                System.out.println( "Otimo vamos seguir a história " );
-                break;
+                System.out.println( "A charada destravava uma pagina em que falava sobre o ataque que aconteceu na vila na epoca " +
+                "que encontraram\n" + playUm
+                + " Quem atacou a sua família e o motivo dos ataques atuais dos mercenários." );                break;
 
             } else {
                 System.out.println( "Você errou tem mais [" + i + "] Tentativas \nOque na histório o salvou quando sua mãe fugia " +
