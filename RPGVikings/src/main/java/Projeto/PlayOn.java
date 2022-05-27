@@ -12,14 +12,11 @@ public class PlayOn  {
      * @param inicio
      */
     static  void Menu() {
-        PlayOn menu = new PlayOn();
-
         //Importação e Variaveis:
         Scanner input = new Scanner( System.in );
         String playUm, respostaCharada;
         String decisaoRito;
-        int X, decisao01, decisaoClasse;
-        double Y;
+        int decisao01, decisaoClasse;
 
         //Inicio do Jogo:
         System.out.println(
