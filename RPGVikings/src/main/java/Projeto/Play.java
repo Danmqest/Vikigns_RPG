@@ -206,12 +206,20 @@ public class Play {
                             Utils.printSleep(text, parametro);
                             text = "Encontrou um trecho que fala sobre a sua chegada ao castelo";
                             Utils.printSleep(text, parametro);
-                            System.out.println("");
-                            System.out.println("----------------------------Diário-----------------------------");
+                            text = "";
+                            Utils.printSleep(text, 1000);
+                            text = "----------------------------Diário-----------------------------";
+                            Utils.printSleep(text, 0);
                             text = "...Era o último dia primaveril, você chegou como um presente...";
+                            Utils.printSleep(text, parametro);
                             text = "...Através de algo que te salvou, mas poderia ter matado...";
-                            System.out.println("---------------------------------------------------------------");
-                            System.out.println("");
+                            Utils.printSleep(text, parametro);
+                            text = "----------------------------------------------------------------";
+                            Utils.printSleep(text, 0);
+                            text = "";
+                            Utils.printSleep(text, parametro);
+                            Utils.limpar();
+
                             text = "Você fica intrigado com essa informação, o que salvou que poderia ter matado?";
                             Utils.printSleep(text, parametro);
                             text = "Continue investigando para saber a resposta.";
@@ -230,12 +238,19 @@ public class Play {
                             Utils.printSleep(text, parametro);
                             text = "Encontrou um trecho que fala sobre a sua chegada ao castelo";
                             Utils.printSleep(text, parametro);
-                            System.out.println("");
-                            System.out.println("----------------------------Diário-----------------------------");
+                            text = "";
+                            Utils.printSleep(text, 1000);
+                            text = "----------------------------Diário-----------------------------";
+                            Utils.printSleep(text, 0);
                             text = "...Era o último dia primaveril, você chegou como um presente...";
+                            Utils.printSleep(text, parametro);
                             text = "...Através de algo que te salvou, mas poderia ter matado...";
-                            System.out.println("---------------------------------------------------------------");
-                            System.out.println("");
+                            Utils.printSleep(text, parametro);
+                            text = "----------------------------------------------------------------";
+                            Utils.printSleep(text, 0);
+                            text = "";
+                            Utils.printSleep(text, parametro);
+                            Utils.limpar();
                             text = "Você fica intrigado com essa informação, o que salvou que poderia ter matado?";
                             Utils.printSleep(text, parametro);
                             text = "Continue investigando para saber a resposta.";
@@ -306,15 +321,20 @@ public class Play {
                     Utils.printSleep(text, parametro);
                     Menu.menu();
                 }
-                text = "Você atingiu o mercenário mais forte e conseguiu uma vantagem na luta! Siga em frente!";
-                Utils.printSleep(text, parametro);
-                Utils.limpar();
-                text = "Missão cumprida!!! Volte para o reino e informe o progresso ao rei.";
-                Utils.printSleep(text, parametro);
-                Utils.limpar();
             }
 
+            text = "Você atingiu o mercenário mais forte e conseguiu uma vantagem na luta! Siga em frente!";
+            Utils.printSleep(text, parametro);
+            Utils.limpar();
+            text = "Missão cumprida!!! Volte para o reino e informe o progresso ao rei.";
+            Utils.printSleep(text, parametro);
+            Utils.limpar();
+
             // endregion
+            // region desafio cinco A
+            
+            // endregion
+
             // B
         } else if (resposta == 2) {
 
