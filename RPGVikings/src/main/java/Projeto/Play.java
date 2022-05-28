@@ -155,7 +155,7 @@ public class Play {
 
         // region outros desafios | A - Derivados da resposta 1 do desafio 2, B
         // derivados da resposta 2 do desafio 2.
-        // A
+        // region A
         if (resposta == 1) {
 
             // region desafio tres A
@@ -332,15 +332,80 @@ public class Play {
 
             // endregion
             // region desafio cinco A
-            
-            // endregion
+            parametro = 2000;
+            text = "Rei: Muito bem " + jogador.nome
+                    + "!! Você conseguiu descobrir o problema e eliminar os mercenários \n"
+                    + "...";
+            Utils.printSleep(text, parametro);
+            text = "O próximo passo é encontrar o meu informante ao sul do reino para descobrir mais informações ";
+            Utils.printSleep(text, parametro);
+            Utils.limpar();
 
-            // B
+            text = "---------------------------------------------------- \n"
+                    + "------------------REINO DO NORTE--------------------- \n"
+                    + "----------------------------------------------------";
+            Utils.printSleep(text, parametro);
+            Utils.limpar();
+
+            text = "Informante: Veja se não é o queridinho adotado da rainha e seu primogênito";
+            Utils.printSleep(text, parametro);
+            text = "Você está se perguntando como eu sei sobre isso?";
+            Utils.printSleep(text, parametro);
+            text = "Ora...Eu sei sobre tudo neste reino, estava lá quando você chegou"
+                    + "";
+            Utils.printSleep(text, parametro);
+            text = "Mas suponho que você não não tenha vindo até aqui a mando do rei para falarmos sobre isso...";
+            Utils.printSleep(text, parametro);
+            text = "Soube que os ataques de mercenários voltaram a acontecer no reino da Escandinávia";
+            Utils.printSleep(text, parametro);
+            text = "Não está muito diferente do que aconteceu a dezoito anos atrás...";
+            Utils.printSleep(text, parametro);
+            Utils.limpar();
+
+            text = "Informante: Me leve ao rei para que eu possa informa-lo sobre o que eu descobri.";
+            Utils.printSleep(text, parametro);
+            text = "Estou...estou com falta de ar...tinha alguma coisa em minha bebida...socorro"
+                    + "";
+            Utils.printSleep(text, parametro);
+            // endregion
+            // endregion
+            // region B
         } else if (resposta == 2) {
 
-        } else {
+        } // endregion
+        else {
             Menu.menu();
         }
+
+        /*
+         * 
+         * text = "Quer saber mais sobre a sua história?"
+         * + "[1] Sim"
+         * + "[2] Não";
+         * int resp = jogador.input.nextInt();
+         * 
+         * switch (resp) {
+         * case 1:
+         * text = "Você era pequeno, havia um rio, e uma cesta";
+         * Utils.printSleep(text, parametro);
+         * text = "Lembro-me de que a rainha registrava tudo em seu diário";
+         * Utils.printSleep(text, parametro);
+         * text = "Deve haver mais informações sobre isso lá";
+         * Utils.printSleep(text, parametro);
+         * text = "É tudo o que eu tenho a dizer.";
+         * Utils.printSleep(text, parametro);
+         * 
+         * break;
+         * 
+         * case 2:
+         * 
+         * break;
+         * 
+         * default:
+         * break;
+         * }
+         * Utils.limpar();
+         */
 
         // endregion
 
