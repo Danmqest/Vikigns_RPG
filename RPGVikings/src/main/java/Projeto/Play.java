@@ -334,27 +334,6 @@ public class Play {
                                         + "----------------------------------------------------";
                         Utils.printSleep(text, parametro);
                         Utils.limpar();
-
-                        text = "Informante: Veja se não é o queridinho adotado da rainha e seu primogênito";
-                        Utils.printSleep(text, parametro);
-                        text = "Você está se perguntando como eu sei sobre isso?";
-                        Utils.printSleep(text, parametro);
-                        text = "Ora...Eu sei sobre tudo neste reino, estava lá quando você chegou"
-                                        + "";
-                        Utils.printSleep(text, parametro);
-                        text = "Mas suponho que você não não tenha vindo até aqui a mando do rei para falarmos sobre isso...";
-                        Utils.printSleep(text, parametro);
-                        text = "Soube que os ataques de mercenários voltaram a acontecer no reino da Escandinávia";
-                        Utils.printSleep(text, parametro);
-                        text = "Não está muito diferente do que aconteceu a dezoito anos atrás...";
-                        Utils.printSleep(text, parametro);
-                        Utils.limpar();
-
-                        text = "Informante: Me leve ao rei para que eu possa informa-lo sobre o que eu descobri.";
-                        Utils.printSleep(text, parametro);
-                        text = "Estou...estou com falta de ar...tinha alguma coisa em minha bebida...socorro"
-                                        + "";
-                        Utils.printSleep(text, parametro);
                         // endregion
                         // endregion
                         // region B
@@ -454,6 +433,7 @@ public class Play {
                                                                                         + jogador.magia;
                                                                         Utils.printSleep(text, parametro);
                                                                 }
+                                                                Utils.limpar();
                                                         } else if (alternativa == 2) {
                                                                 text = "Você prendeu e dominou o Bruxo \n"
                                                                                 + "Agora ele lhe concederá a uma resposta de algo que deseja do fundo do seu coração"
@@ -556,96 +536,63 @@ public class Play {
                         text = "Você sobreviveu ao deserto de gelo e conseguiu chegar na cidade"
                                         + "...";
                         Utils.printSleep(text, parametro);
-
-                        text = "Agora precisa encontrar o informante do rei"
-                                        + "...";
+                        text = "Agora precisa encontrar o informante do rei";
+                        Utils.printSleep(text, parametro);
+                        text = "Existem duas tabernas na cidade, ele deve estar em uma delas ";
+                        Utils.printSleep(text, parametro);
+                        text = "Em qual você gostaria de procura-lo primeiro?";
                         Utils.printSleep(text, parametro);
 
-                        text = "Rei: Vou enviar-lhe a primeira missão junto ao meu filho " + nomeIrmao;
-                        Utils.printSleep(text, parametro);
-                        text = "Vão até a vila e investiguem uma onda de assalto que está acontecendo lá.";
-                        Utils.printSleep(text, parametro);
-                        Utils.limpar();
+                        int resp = 0;
+                        while (resp != 1) {
+                                text = "[1] Taberna dos Sacrificios \n"
+                                                + "[2] Taberna dos Desejos";
+                                Utils.printSleep(text, parametro);
+                                resp = jogador.input.nextInt();
+                                Utils.limpar();
 
-                        text = "---------------------------------------------------- \n"
-                                        + "-------------------INVESTIGANDO--------------------- \n"
-                                        + "----------------------------------------------------";
-                        Utils.printSleep(text, parametro);
-                        Utils.limpar();
-
-                        text = "Vocês estavam investigando os assaltos quando se depararam com cinco mercenários ";
-                        Utils.printSleep(text, parametro);
-                        text = "Eles estão em vantagem, pois estão em maior quantidade.";
-                        Utils.printSleep(text, parametro);
-                        text = "Para que vocês possam se safar precisam descobrir a média de mercenários";
-                        Utils.printSleep(text, parametro);
-                        text = "Para atacar o ladrão correspondente";
-                        Utils.printSleep(text, parametro);
-                        text = "Qual a média de mercenários?  ";
-                        Utils.printSleep(text, parametro);
-
-                        int resp;
-                        resp = jogador.input.nextInt();
-                        while (resp != 3 && jogador.vida > 0) {
-                                jogador.vida = jogador.vida - 1;
-                                if (jogador.vida > 0 && resp != 3) {
-                                        text = "Você foi atacado e perdeu 1 de vida, tente novamente.";
+                                if (resp == 1) {
+                                        text = "Você encontrou o informante do rei";
                                         Utils.printSleep(text, parametro);
-                                        text = "Vidas restantes:" + jogador.vida;
+                                        text = "Ele está caindo de bebâdo";
                                         Utils.printSleep(text, parametro);
-                                        resp = jogador.input.nextInt();
+                                        text = "Você pode tentar deixa-lo sóbrio tentando uma dessas coisas";
+                                        Utils.printSleep(text, parametro);
+                                        text = "[1] Jogar hidromel em sua cara /n"
+                                                        + "[2] Dar um tapa em sua cara";
+                                        Utils.printSleep(text, parametro);
+                                        int opcao;
+                                        opcao = jogador.input.nextInt();
+                                        switch (opcao) {
+                                                case 1:
+                                                        jogador.vida = jogador.vida - 1;
+                                                        text = "O informante ficou furioso por você ter desperdiçado a sua bebida";
+                                                        Utils.printSleep(text, parametro);
+                                                        text = "E te deu um soco muito forte na sua cara, perdeu 1 de vida /n"
+                                                                        + "Vidas restantes: " + jogador.vida;
+                                                        Utils.printSleep(text, parametro);
+                                                        text = "Pelo menos isso o deixou um pouco mais sóbrio";
+                                                        Utils.printSleep(text, parametro);
+                                                        Utils.limpar();
+                                                        break;
+                                                case 2:
+                                                        text = "O tapa funcionou muito bem para deixa-lo alerta!";
+                                                        Utils.printSleep(text, parametro);
+                                                        Utils.limpar();
+                                                        break;
 
-                                } else if (jogador.vida == 0) {
-                                        text = "Você morreu! Tente novamente";
+                                                default:
+                                                        break;
+                                        }
+                                } else {
+                                        text = "Opa, o informante não está nessa taberna";
                                         Utils.printSleep(text, parametro);
-                                        Menu.menu();
+                                        text = "Tente em outra!";
+                                        Utils.printSleep(text, parametro);
                                 }
                         }
-
-                        text = "Você atingiu o mercenário mais forte e conseguiu uma vantagem na luta! Siga em frente!";
-                        Utils.printSleep(text, parametro);
-                        Utils.limpar();
-                        text = "Missão cumprida!!! Volte para o reino e informe o progresso ao rei.";
-                        Utils.printSleep(text, parametro);
                         Utils.limpar();
 
-                        // endregion
-                        // region desafio cinco B
-                        parametro = 2000;
-                        text = "Rei: Muito bem " + jogador.nome
-                                        + "!! Você conseguiu descobrir o problema e eliminar os mercenários \n"
-                                        + "...";
-                        Utils.printSleep(text, parametro);
-                        text = "O próximo passo é encontrar o meu informante ao sul do reino para descobrir mais informações ";
-                        Utils.printSleep(text, parametro);
-                        Utils.limpar();
-
-                        text = "---------------------------------------------------- \n"
-                                        + "------------------REINO DO NORTE--------------------- \n"
-                                        + "----------------------------------------------------";
-                        Utils.printSleep(text, parametro);
-                        Utils.limpar();
-
-                        text = "Informante: Veja se não é o queridinho adotado da rainha e seu primogênito";
-                        Utils.printSleep(text, parametro);
-                        text = "Você está se perguntando como eu sei sobre isso?";
-                        Utils.printSleep(text, parametro);
-                        text = "Ora...Eu sei sobre tudo neste reino, estava lá quando você chegou"
-                                        + "";
-                        Utils.printSleep(text, parametro);
-                        text = "Mas suponho que você não não tenha vindo até aqui a mando do rei para falarmos sobre isso...";
-                        Utils.printSleep(text, parametro);
-                        text = "Soube que os ataques de mercenários voltaram a acontecer no reino da Escandinávia";
-                        Utils.printSleep(text, parametro);
-                        text = "Não está muito diferente do que aconteceu a dezoito anos atrás...";
-                        Utils.printSleep(text, parametro);
-                        Utils.limpar();
-
-                        text = "Informante: Me leve ao rei para que eu possa informa-lo sobre o que eu descobri.";
-                        Utils.printSleep(text, parametro);
-                        text = "Estou...estou com falta de ar...tinha alguma coisa em minha bebida...socorro"
-                                        + "";
-                        Utils.printSleep(text, parametro);
                         // endregion
                         // endregion
 
@@ -653,6 +600,27 @@ public class Play {
                 else {
                         Menu.menu();
                 }
+                
+                text = "Informante: Veja se não é o queridinho adotado da rainha e seu primogênito";
+                Utils.printSleep(text, parametro);
+                text = "Você está se perguntando como eu sei sobre isso?";
+                Utils.printSleep(text, parametro);
+                text = "Ora...Eu sei sobre tudo neste reino, estava lá quando você chegou"
+                                + "";
+                Utils.printSleep(text, parametro);
+                text = "Mas suponho que você não não tenha vindo até aqui a mando do rei para falarmos sobre isso...";
+                Utils.printSleep(text, parametro);
+                text = "Soube que os ataques de mercenários voltaram a acontecer no reino da Escandinávia";
+                Utils.printSleep(text, parametro);
+                text = "Não está muito diferente do que aconteceu a dezoito anos atrás...";
+                Utils.printSleep(text, parametro);
+                Utils.limpar();
+
+                text = "Informante: Me leve ao rei para que eu possa informa-lo sobre o que eu descobri.";
+                Utils.printSleep(text, parametro);
+                text = "Estou...estou com falta de ar...tinha alguma coisa em minha bebida...socorro"
+                                + "";
+                Utils.printSleep(text, parametro);
 
                 /*
                  * 
