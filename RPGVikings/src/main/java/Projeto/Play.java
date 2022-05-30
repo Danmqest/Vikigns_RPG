@@ -485,7 +485,7 @@ public class Play {
                                                                 text = " "
                                                                                 + "O Bruxo ficou com dó na sua piada ruim e decidiu lhe dar uma poção de cura antes de lhe expulsar de sua cabana";
                                                                 Utils.printSleep(text, parametro);
-
+                                                                Utils.limpar();
                                                         } else if (alternativa == 2) {
                                                                 text = "------------------------------------------------------------------------------------------------\n"
                                                                                 + "Existe uma luz que ilumina o céu e se chama Aurora Boreal, é possivel ve-la no hemisfério norte!\n"
@@ -592,8 +592,8 @@ public class Play {
                                         text = "Tente em outra!";
                                         Utils.printSleep(text, parametro);
                                 }
+                                resp =1;
                         }
-                        Utils.limpar();
 
                         // endregion
                         // endregion
@@ -624,13 +624,13 @@ public class Play {
                 text = "Estou...estou com falta de ar...tinha alguma coisa em minha bebida...socorro"
                                 + "";
                 Utils.printSleep(text, parametro);
-
+                Utils.limpar();
                 text = "O informante foi envenenado, para salva-lo você precisa escolher entre três plantas que estão no jardim da taverna."
-                                + "Conte com a sorte e faça sua escolha!";
-                Utils.printSleep(text, parametro);
-                text = "[1] Flor vermelha \n"
+                                + "Conte com a sorte e faça sua escolha! \n"
+                                + "[1] Flor vermelha \n"
                                 + "[2] Flor preta \n"
                                 + "[3] Flor rosa";
+                Utils.printSleep(text, parametro);
                 int escolha;
                 escolha = jogador.input.nextInt();
 
@@ -640,8 +640,8 @@ public class Play {
                                 Utils.printSleep(text, parametro);
                                 text = "Ele se sente grato por te-lo salvado e decide te ajudar a entender mais sobre o seu passado.";
                                 Utils.printSleep(text, parametro);
-                                text = "Vocês fazem uma parada no caminho para que você fale com uma antiga criada do rei."
-                                                + ""
+                                text = "Vocês fazem uma parada no caminho para que você fale com uma antiga criada do rei.\n"
+                                                + "\n"
                                                 + "---------------------------------------------------------------------------------------------------";
                                 Utils.printSleep(text, parametro);
                                 Utils.limpar();
@@ -664,30 +664,34 @@ public class Play {
                                 Utils.printSleep(text, parametro);
                                 text = "O que matou que poderia ter salvado?";
                                 Utils.printSleep(text, parametro);
+                                Utils.limpar();
                                 text = "Você pensa um pouco sobre isso \n"
                                                 + "(...)";
                                 text = "E percebe que ao resolver a charada descobrirá o que realmente aconteceu com você no passado";
                                 Utils.printSleep(text, parametro);
-                                boolean teste = true;
-
-
-                                while (!teste) {
-                                text = "O que matou que poderia ter salvado? (Sem acento)";
+                                text = "O que matou que poderia ter salvado? (Minusculo e sem acento)";
                                 Utils.printSleep(text, parametro);
                                 String charada;
-                                charada = jogador.input.nextLine().trim().toLowerCase();
+                                boolean teste = false;
 
-
+                                while (!teste) {
+                                        charada = jogador.input.nextLine().trim().toLowerCase();
                                         switch (charada) {
                                                 case "agua":
                                                 case "água":
-                                                text = "Você desvendou a charada e conseguiu desbloquear a memória de sua história";
-                                                teste = true;
+
+                                                        text = "--------------------------------------------------------------------------- \n"
+                                                        +"Você desvendou a charada e conseguiu desbloquear a memória de sua história\n"
+                                                        +"Conseguiu chegar ao final do Game!!!!!!!\n"
+                                                        +"---------------------------------------------------------------------------\n";
+                                                        Utils.printSleep(text, 4000);
+                                                        teste = true;
+                                                        Utils.limpar();
                                                         break;
                                                 default:
-                                                text = "É claro como a água, tente novamente e você desbloqueará o mistério";
-                                                Utils.printSleep(text, parametro);
-                                                teste = false;
+                                                        text = "É claro como a água, tente novamente e você desbloqueará o mistério";
+                                                        Utils.printSleep(text, parametro);
+                                                        teste = false;
                                                         break;
                                         }
                                 }
@@ -697,11 +701,15 @@ public class Play {
 
                                 text = "Você escolheu a flor errada e matou o informante, fracassou na missão e não poderá seguir em frente. \n"
                                                 + "Volte ao inicio do jogo";
+                                Utils.printSleep(text, parametro);
+                                Utils.limpar();
                                 Menu.menu();
                                 break;
                         case 3:
                                 text = "Você escolheu a flor errada e matou o informante, fracassou na missão e não poderá seguir em frente. \n"
                                                 + "Volte ao inicio do jogo";
+                                Utils.printSleep(text, parametro);
+                                Utils.limpar();
                                 Menu.menu();
 
                                 break;
@@ -713,6 +721,7 @@ public class Play {
                                 Menu.menu();
                                 break;
                 }
+                Creditos.credito();
                 // endregion
 
         }
