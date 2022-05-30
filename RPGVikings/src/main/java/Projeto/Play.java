@@ -1,5 +1,7 @@
 package Projeto;
 
+import java.util.concurrent.TimeoutException;
+
 public class Play {
 
         public void start() {
@@ -638,13 +640,55 @@ public class Play {
                                 Utils.printSleep(text, parametro);
                                 text = "Ele se sente grato por te-lo salvado e decide te ajudar a entender mais sobre o seu passado.";
                                 Utils.printSleep(text, parametro);
-                                text = "Vocês fazem uma parada no caminho para que você fale com uma antiga empregada do rei."
+                                text = "Vocês fazem uma parada no caminho para que você fale com uma antiga criada do rei."
                                                 + ""
                                                 + "---------------------------------------------------------------------------------------------------";
                                 Utils.printSleep(text, parametro);
                                 Utils.limpar();
 
+                                text = "Criada: O que eu me lembro sobre a sua chegada, jovem rapaz";
+                                Utils.printSleep(text, parametro);
+                                text = "Você chegou num lindo dia de primavera, nos o encontramos em uma cesta";
+                                Utils.printSleep(text, parametro);
+                                text = "Na borda de um riacho.";
+                                Utils.printSleep(text, parametro);
+                                text = "O que ouvi falar é que naquele mesmo dia, havia tido uma invasão de mercenários";
+                                Utils.printSleep(text, parametro);
+                                text = "Num pequeno vilarejo próximo ao rio acima do reino";
+                                Utils.printSleep(text, parametro);
+                                text = "Os seus pais devem ter feito o que fizeram para tentar te salvar.";
+                                Utils.printSleep(text, parametro);
+                                Utils.limpar();
 
+                                text = "Depois dessa conversa, você se lembra de que viu uma charada em algum lugar";
+                                Utils.printSleep(text, parametro);
+                                text = "O que matou que poderia ter salvado?";
+                                Utils.printSleep(text, parametro);
+                                text = "Você pensa um pouco sobre isso \n"
+                                                + "(...)";
+                                text = "E percebe que ao resolver a charada descobrirá o que realmente aconteceu com você no passado";
+                                Utils.printSleep(text, parametro);
+                                text = "O que matou que poderia ter salvado? (Sem acento)";
+                                Utils.printSleep(text, parametro);
+                                String charada;
+                                charada = jogador.input.nextLine().trim().toLowerCase();
+
+                                boolean teste = true;
+
+                                while (!teste) {
+                                        switch (charada) {
+                                                case "agua":
+                                                case "água":
+                                                
+                                                teste = true;
+                                                        break;
+                                                default:
+                                                text = "É claro como a água, tente novamente e você desbloqueará o mistério";
+                                                Utils.printSleep(text, parametro);
+                                                teste = false;
+                                                        break;
+                                        }
+                                }
 
                                 break;
                         case 2:
