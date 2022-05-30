@@ -668,18 +668,20 @@ public class Play {
                                                 + "(...)";
                                 text = "E percebe que ao resolver a charada descobrirá o que realmente aconteceu com você no passado";
                                 Utils.printSleep(text, parametro);
+                                boolean teste = true;
+
+
+                                while (!teste) {
                                 text = "O que matou que poderia ter salvado? (Sem acento)";
                                 Utils.printSleep(text, parametro);
                                 String charada;
                                 charada = jogador.input.nextLine().trim().toLowerCase();
 
-                                boolean teste = true;
 
-                                while (!teste) {
                                         switch (charada) {
                                                 case "agua":
                                                 case "água":
-                                                
+                                                text = "Você desvendou a charada e conseguiu desbloquear a memória de sua história";
                                                 teste = true;
                                                         break;
                                                 default:
