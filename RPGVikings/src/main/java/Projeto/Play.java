@@ -153,8 +153,7 @@ public class Play {
         Utils.printSleep(text, parametro);
         Utils.limpar();
 
-        // region outros desafios | A - Derivados da resposta 1 do desafio 2, B
-        // derivados da resposta 2 do desafio 2.
+        // region outros desafios | A - Derivados da resposta 1 do desafio 2, B derivados da resposta 2 do desafio 2.
         // region A
         if (resposta == 1) {
 
@@ -369,7 +368,7 @@ public class Play {
             Utils.printSleep(text, parametro);
             // endregion
             // endregion
-            // region B
+        // region B 
         } else if (resposta == 2) {
 
         } // endregion

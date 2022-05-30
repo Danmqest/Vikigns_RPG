@@ -122,7 +122,7 @@ public class Menu {
                                         break;
 
                                 default:
-                                        System.out.println("");
+                                        System.out.println("-------------------------");
                                         System.out.println("Escolha uma opção válida.");
                                         System.out.println("-------------------------");
                                         opcao = false;
