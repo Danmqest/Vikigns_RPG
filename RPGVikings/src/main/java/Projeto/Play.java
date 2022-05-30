@@ -558,7 +558,7 @@ public class Play {
                                         Utils.printSleep(text, parametro);
                                         text = "Você pode tentar deixa-lo sóbrio tentando uma dessas coisas";
                                         Utils.printSleep(text, parametro);
-                                        text = "[1] Jogar hidromel em sua cara /n"
+                                        text = "[1] Jogar hidromel em sua cara \n"
                                                         + "[2] Dar um tapa em sua cara";
                                         Utils.printSleep(text, parametro);
                                         int opcao;
@@ -568,7 +568,7 @@ public class Play {
                                                         jogador.vida = jogador.vida - 1;
                                                         text = "O informante ficou furioso por você ter desperdiçado a sua bebida";
                                                         Utils.printSleep(text, parametro);
-                                                        text = "E te deu um soco muito forte na sua cara, perdeu 1 de vida /n"
+                                                        text = "E te deu um soco muito forte na sua cara, perdeu 1 de vida \n"
                                                                         + "Vidas restantes: " + jogador.vida;
                                                         Utils.printSleep(text, parametro);
                                                         text = "Pelo menos isso o deixou um pouco mais sóbrio";
@@ -600,7 +600,7 @@ public class Play {
                 else {
                         Menu.menu();
                 }
-                
+
                 text = "Informante: Veja se não é o queridinho adotado da rainha e seu primogênito";
                 Utils.printSleep(text, parametro);
                 text = "Você está se perguntando como eu sei sobre isso?";
@@ -618,40 +618,55 @@ public class Play {
 
                 text = "Informante: Me leve ao rei para que eu possa informa-lo sobre o que eu descobri.";
                 Utils.printSleep(text, parametro);
+                Utils.limpar();
                 text = "Estou...estou com falta de ar...tinha alguma coisa em minha bebida...socorro"
                                 + "";
                 Utils.printSleep(text, parametro);
 
-                /*
-                 * 
-                 * text = "Quer saber mais sobre a sua história?"
-                 * + "[1] Sim"
-                 * + "[2] Não";
-                 * int resp = jogador.input.nextInt();
-                 * 
-                 * switch (resp) {
-                 * case 1:
-                 * text = "Você era pequeno, havia um rio, e uma cesta";
-                 * Utils.printSleep(text, parametro);
-                 * text = "Lembro-me de que a rainha registrava tudo em seu diário";
-                 * Utils.printSleep(text, parametro);
-                 * text = "Deve haver mais informações sobre isso lá";
-                 * Utils.printSleep(text, parametro);
-                 * text = "É tudo o que eu tenho a dizer.";
-                 * Utils.printSleep(text, parametro);
-                 * 
-                 * break;
-                 * 
-                 * case 2:
-                 * 
-                 * break;
-                 * 
-                 * default:
-                 * break;
-                 * }
-                 * Utils.limpar();
-                 */
+                text = "O informante foi envenenado, para salva-lo você precisa escolher entre três plantas que estão no jardim da taverna."
+                                + "Conte com a sorte e faça sua escolha!";
+                Utils.printSleep(text, parametro);
+                text = "[1] Flor vermelha \n"
+                                + "[2] Flor preta \n"
+                                + "[3] Flor rosa";
+                int escolha;
+                escolha = jogador.input.nextInt();
 
+                switch (escolha) {
+                        case 1:
+                                text = "Você escolheu a flor certa e conseguiu salvar informante";
+                                Utils.printSleep(text, parametro);
+                                text = "Ele se sente grato por te-lo salvado e decide te ajudar a entender mais sobre o seu passado.";
+                                Utils.printSleep(text, parametro);
+                                text = "Vocês fazem uma parada no caminho para que você fale com uma antiga empregada do rei."
+                                                + ""
+                                                + "---------------------------------------------------------------------------------------------------";
+                                Utils.printSleep(text, parametro);
+                                Utils.limpar();
+
+
+
+                                break;
+                        case 2:
+
+                                text = "Você escolheu a flor errada e matou o informante, fracassou na missão e não poderá seguir em frente. \n"
+                                                + "Volte ao inicio do jogo";
+                                Menu.menu();
+                                break;
+                        case 3:
+                                text = "Você escolheu a flor errada e matou o informante, fracassou na missão e não poderá seguir em frente. \n"
+                                                + "Volte ao inicio do jogo";
+                                Menu.menu();
+
+                                break;
+
+                        default:
+                                text = "Escolha uma opção válida da próxima vez!";
+                                Utils.printSleep(text, parametro);
+                                Utils.limpar();
+                                Menu.menu();
+                                break;
+                }
                 // endregion
 
         }
